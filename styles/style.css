@@ -1,0 +1,162 @@
+:root{
+
+    /* typography */
+    --font-primary: 'DM Sans', sans-serif;
+    --font-secondary: 'Poppins', sans-serif; 
+    --font-headings: 'Zen Dots'; 
+
+    /* Colors */
+    --color-secondary: #152c3d;
+    --color-secondary:#406882;
+    --color-primary:#ffffff;
+    --color-border: #6d6d6d53;
+
+    /* Font colors */
+    --text-highlight: #1A374D;
+    --text-white: #ffffff;
+    --text-primary: #100F0F;
+    --text-secondary: #393E46;
+    
+    /* Backgrounds */
+    --dark-background: #111111;
+    --light-background: #ffffff;
+    --dark-text:#ffffff;
+    --light-text: #111111;
+
+    color: var(--text-primary);
+}
+
+
+.darkBackground{
+    background: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.lightBackground{
+    background: var(--light-background);
+    color: var(--light-text);
+}
+
+/* Body */
+body{
+    width: 100vw;
+    min-height: 100vh;
+
+    /* Scaling for widescreens */
+    max-width: 1366px;
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0 50px;
+
+    /* Global fonts */
+    font-family: var(--font-secondary);
+}
+
+/* Navigation Bar */
+nav.navBar{
+    width: 100%;
+    height: 5rem;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 2px solid var(--color-border);
+}
+
+nav.navBar ul.links{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+ul.links li{
+    padding: 0 1.5rem;
+}
+
+nav.navBar a.logo{
+
+    font-size: 2rem;
+    font-family: var(--font-headings);
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--color-secondary);
+
+    transition: all ease-in 0.2s;
+}
+
+nav.navBar a:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+nav.navBar ul.btns span{
+    transform: scale(1.3);
+
+    color: var(--color-secondary);
+    
+    padding: 0 0.5rem;
+    transition: all ease-in 0.2s;
+}
+
+nav.navBar ul.btns span:hover{
+    transform: scale(1.35);
+    cursor: pointer;
+}
+
+nav.navBar ul.btns span.settings:hover{
+    rotate: 30deg;
+}
+
+/* Weather Component */
+section.weather{
+    width: 100%;
+    height: 4rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    list-style-type: none;
+
+    border-bottom: 2px solid var(--color-border);
+}
+
+section.weather li{
+    padding: 0 1rem;
+}
+
+section.weather span.icon{
+    padding: 0 0.5rem;
+    font-size: larger;
+}
+
+section.weather li span.bold{
+    font-weight: 600;
+}
+
+/* Hot topics */
+
+section.topic-links{
+    width: 100%;
+    height: 3rem;
+
+    margin: 0 auto;
+    display: flex;
+
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: 2px solid var(--color-border);
+}
